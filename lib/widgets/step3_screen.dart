@@ -32,8 +32,6 @@ class _Step3ScreenState extends State<Step3Screen> {
   @override
   Widget build(BuildContext context) {
     return BlocListener<FormFlowBloc, FormFlowState>(
-      listenWhen: (previous, current) =>
-      previous.comment != current.comment,
       listener: (context, state) {
         if (_commentController.text != state.comment) {
           _commentController.text = state.comment;
