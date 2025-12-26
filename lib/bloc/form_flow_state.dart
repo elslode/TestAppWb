@@ -36,7 +36,7 @@ class FormFlowState extends Equatable {
     String? name,
     String? email,
     String? userType,
-    bool? isUpgradeSalary,
+    bool? isAgreed,
     String? comment,
   }) {
     return FormFlowState(
@@ -44,7 +44,7 @@ class FormFlowState extends Equatable {
       name: name ?? this.name,
       email: email ?? this.email,
       userType: userType ?? this.userType,
-      isAgreed: isUpgradeSalary ?? this.isAgreed,
+      isAgreed: isAgreed ?? this.isAgreed,
       comment: comment ?? this.comment,
     );
   }

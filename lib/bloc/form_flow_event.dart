@@ -35,12 +35,12 @@ class UserTypeChanged extends FormFlowEvent {
 }
 
 class AgreementToggled extends FormFlowEvent {
-  final bool isNeedToUpgradeSalary;
+  final bool isAgreed;
 
-  const AgreementToggled(this.isNeedToUpgradeSalary);
+  const AgreementToggled(this.isAgreed);
 
   @override
-  List<Object?> get props => [isNeedToUpgradeSalary];
+  List<Object?> get props => [isAgreed];
 }
 
 class CommentChanged extends FormFlowEvent {

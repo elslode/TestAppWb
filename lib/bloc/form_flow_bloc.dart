@@ -12,7 +12,7 @@ class FormFlowBloc extends Bloc<FormFlowEvent, FormFlowState> {
       on<NameChanged>(_onNameChanged);
       on<EmailChanged>(_onEmailChanged);
       on<UserTypeChanged>(_onUserTypeChanged);
-      on<AgreementToggled>(_isNeedToUpgradeSalary);
+      on<AgreementToggled>(_isAgreeChanged);
       on<CommentChanged>(_onCommentChanged);
 
       on<NextStepPressed>(_onNextStepPressed);
@@ -34,11 +34,11 @@ class FormFlowBloc extends Bloc<FormFlowEvent, FormFlowState> {
     emit(state.copyWith(userType: event.userType));
   }
 
-  void _isNeedToUpgradeSalary(
+  void _isAgreeChanged(
     AgreementToggled event,
     Emitter<FormFlowState> emit,
   ) {
-    emit(state.copyWith(isUpgradeSalary: event.isNeedToUpgradeSalary));
+    emit(state.copyWith(isAgreed: event.isAgreed));
   }
 
   void _onCommentChanged(CommentChanged event, Emitter<FormFlowState> emit) {
